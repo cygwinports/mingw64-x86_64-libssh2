@@ -3,7 +3,7 @@ inherit cross
 
 NAME="mingw64-x86_64-libssh2"
 VERSION=1.4.3
-RELEASE=1
+RELEASE=2
 CATEGORY="Devel"
 SUMMARY="SSH2 protocol library for Win64 toolchain"
 DESCRIPTION="libssh2 is a library implementing the SSH2 protocol as defined
@@ -12,6 +12,7 @@ SECSH-FILEXFER, SECSH-DHGEX, SECSH-NUMBERS, and SECSH-PUBLICKEY."
 HOMEPAGE="http://www.libssh2.org/"
 SRC_URI="http://www.libssh2.org/download/libssh2-${VERSION}.tar.gz"
 SRC_DIR="libssh2-${VERSION}"
+PATCH_URI="1.4.3-as-needed.patch"
 
 DIFF_EXCLUDES="libssh2_config.h"
 
