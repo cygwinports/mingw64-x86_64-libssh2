@@ -3,7 +3,7 @@ inherit cross
 
 NAME="mingw64-x86_64-libssh2"
 VERSION=1.7.0
-RELEASE=1
+RELEASE=2
 CATEGORY="Devel"
 SUMMARY="SSH2 protocol library for Win64 toolchain"
 DESCRIPTION="libssh2 is a library implementing the SSH2 protocol as defined
@@ -18,4 +18,5 @@ PATCH_URI="
 
 DIFF_EXCLUDES="libssh2_config.h"
 
+CYGCONF_ARGS="--without-openssl --without-libgcrypt --with-wincng"
 MAKEOPTS+=" dist_man_MANS= "
