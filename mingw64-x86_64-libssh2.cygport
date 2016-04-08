@@ -2,7 +2,7 @@ CROSS_HOST="x86_64-w64-mingw32"
 inherit cross
 
 NAME="mingw64-x86_64-libssh2"
-VERSION=1.5.0
+VERSION=1.7.0
 RELEASE=1
 CATEGORY="Devel"
 SUMMARY="SSH2 protocol library for Win64 toolchain"
@@ -12,6 +12,9 @@ SECSH-FILEXFER, SECSH-DHGEX, SECSH-NUMBERS, and SECSH-PUBLICKEY."
 HOMEPAGE="http://www.libssh2.org/"
 SRC_URI="http://www.libssh2.org/download/libssh2-${VERSION}.tar.gz"
 SRC_DIR="libssh2-${VERSION}"
+PATCH_URI="
+	http://pkgs.fedoraproject.org/cgit/rpms/libssh2.git/plain/CVE-2016-0787.patch?h=f24#/libssh2-1.7.0-CVE-2016-0787.patch
+"
 
 DIFF_EXCLUDES="libssh2_config.h"
 
